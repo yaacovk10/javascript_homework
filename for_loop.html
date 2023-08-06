@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id= 'd1'>
+        <button onclick="name_50()">Name 50 times</button>
+    </div>
+    <br>
+    <br>
+    <div id="d2">
+        <button onclick = "print_numbers(negative =false)">positive numbers</button>
+    </div>
+    <br>
+    <br>
+    <div id="d3">
+        <button onclick = "print_numbers(negative= true)">negative_numbers</button>
+    </div>
+<br><br>
+    <div id="d4">
+<button onclick="jumps_2()">jumps 2</button>
+    </div>
+    <script>
+        function name_50() {
+            for (let i = 0; i < 50; i++) {
+                let j = i + 1
+                const msg = 'Yaacov '+ j + ' times';
+                console.log(msg)
+            }
+            d1.innerHTML += '<br><p>open console to see output<p>'
+        }
+
+        
+        function print_numbers(negative = false){
+            let j;
+            if (negative === true){
+                j = -1
+            }else{
+                j = 1
+            }
+            for (let i=1;i <101;i++){
+                let z = j * i
+                console.log(z)
+            }
+            if (negative == false){
+                d2.innerHTML += '<br><p>open console to see output<p>'
+            }else{
+                d3.innerHTML += '<br><p>open console to see output<p>'
+            }
+        }
+function jumps_2(){
+    let j = -1
+for (let i= 20 ; i<100; i+=2){
+    let z= j * i
+    console.log(z)
+}
+d4.innerHTML += '<br><p>open console to see output<p>'
+}
+
+    </script>
+</body>
+
+</html>
